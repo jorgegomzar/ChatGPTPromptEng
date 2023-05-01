@@ -7,7 +7,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./:/src
+      - ./notebooks:/src/notebooks
     ports:
       - "8888:8888"
     logging:
