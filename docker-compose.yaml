@@ -1,0 +1,17 @@
+services:
+  jupyter:
+    container_name: ${DOCKER_CONTAINER}
+    hostname: ${DOCKER_CONTAINER}
+    restart: always
+    image: ${REGISTRY}:${REGISTRY_PORT}/${DOCKER_IMAGE}:${TAG}
+    env_file:
+      - .env
+    volumes:
+      - ./:/src
+    ports:
+      - "8888:8888"
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: 50m
+        max-file: '2'

@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ChatGPT Prompt Engineering"
+version = "0.0.1"
+description = "Course for https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/"
+authors = ["Jorge Gómez <jorge.gomzar@gmail.com>"]
+readme = "README.md"
+packages = [{include = "notebooks"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+rich = "^13.3.5"
+openai = "^0.27.5"
+python-dotenv = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipdb = "^0.13.13"
+ruff = "^0.0.263"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+exclude = [
+    ".pytest_cache",
+    "venv",
+]
