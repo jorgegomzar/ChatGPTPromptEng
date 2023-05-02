@@ -3,8 +3,8 @@ FROM jupyter/minimal-notebook
 RUN mkdir -p src
 WORKDIR /src
 
-RUN pip install --upgrade pip
-RUN pip install poetry poetry-core
+RUN pip install --upgrade pip==23.1.2
+RUN pip install poetry==1.4.2 poetry-core==1.5.2
 
 COPY notebooks /src/notebooks
 COPY poetry.lock poetry.lock
